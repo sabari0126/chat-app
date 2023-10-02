@@ -3,7 +3,7 @@ const Message = require("../models/message");
 const asyncwrapper = require("../middleware/aysnc");
 const { createCustomError } = require("../error/customErrorHandler");
 
-// endpoint to access all the users except the user who's is currently logged in!
+//endpoint to access all the users except the user who's is currently logged in!
 const getUsers = asyncwrapper(async (req, res, next) => {
   const loggedInUserId = req.params.userId;
 
